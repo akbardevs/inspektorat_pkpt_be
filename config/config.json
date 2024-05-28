@@ -1,0 +1,19 @@
+{
+  "development": {     
+    "username": "devict",
+    "password": "Makassar@2023DB",
+    "database": "absensi_rakorsus2024",
+    "host": "103.151.20.127",
+    "dialect": "mysql",
+    "migrationStorage": "sequelize",
+    "migrationStorageTableName": "SequelizeMeta",
+    "migrationsPath": "./migrations"
+  },
+  "production": {
+    "username": "devict",
+    "password": "Makassar@2023DB",
+    "database": "absensi_rakorsus2024",
+    "host": "103.151.20.127",
+    "dialect": "mysql"
+  }
+}
