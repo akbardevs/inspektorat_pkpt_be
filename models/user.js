@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 const bcrypt = require("bcrypt");
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
@@ -14,14 +12,19 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  User.init({
-    username: DataTypes.STRING,
-    password: DataTypes.STRING,
-    type: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'User',
-  });
+  User.init(
+    {
+      username: DataTypes.STRING,
+      password: DataTypes.STRING,
+      name: DataTypes.STRING,
+      email: DataTypes.STRING,
+      role: DataTypes.STRING,
+    },
+    {
+      sequelize,
+      modelName: "User",
+    }
+  );
 
   User.prototype.setPassword = function (password) {
     const saltRounds = 10; // Adjust the number of salt rounds as needed
